@@ -22,16 +22,16 @@ import { ref } from 'vue';
 
 // 이미지 데이터
 const images = ref([
-  { src: '../../public/images/design/d-1.jpg', text: '카드뉴스' },
-  { src: '../../public/images/design/d-2.JPG', text: '카드뉴스' },
-  { src: '../../public/images/design/d-3.JPG', text: '카드뉴스' },
-  { src: '../../public/images/design/d-4.jpg', text: '카드뉴스' },
-  { src: '../../public/images/design/d-5.png', text: '프로젝트 인터랙티브 <br> 웹 구현' },
-  { src: '../../public/images/design/d-6.png', text: '프로그래스 바 <br> 애니메이션' },
-  { src: '../../public/images/design/d-7.png', text: 'Chart' },
-  { src: '../../public/images/design/d-8.png', text: '기념일 계산기' },
-  { src: '../../public/images/design/d-9.png', text: '이미지 무한루프' },
-  { src: '../../public/images/design/d-10.png', text: '구글 모멘텀 디자인' },
+  { src: './images/design/d-1.jpg', text: '카드뉴스' },
+  { src: './images/design/d-2.JPG', text: '카드뉴스' },
+  { src: './images/design/d-3.JPG', text: '카드뉴스' },
+  { src: './images/design/d-4.jpg', text: '카드뉴스' },
+  { src: './images/design/d-5.png', text: '프로젝트 인터랙티브 <br> 웹 구현' },
+  { src: './images/design/d-6.png', text: '프로그래스 바 <br> 애니메이션' },
+  { src: './images/design/d-7.png', text: 'Chart' },
+  { src: './images/design/d-8.png', text: '기념일 계산기' },
+  { src: './images/design/d-9.png', text: '이미지 무한루프' },
+  { src: './images/design/d-10.png', text: '구글 모멘텀 디자인' },
 ]);
 
 const currentIndex = ref(0);
