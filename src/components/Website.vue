@@ -6,7 +6,7 @@
       <div class="content-slider" :style="{transform: `translateX(${-currentIdx * 100}%)`}">
         <div class="content-container" v-for="(project, idx) in projects" :key="idx">
           <div class="content">
-            <video v-if="project.video" :src="project.video" controls autoplay loop muted></video>
+            <img v-if="project.image" :src="project.image" alt="프로젝트 미리보기">
           </div>
           <div class="p-txt">
             <p><img src="../../public/images/bubble.png" alt="말풍선이미지">프로젝트 설명</p>
@@ -56,7 +56,7 @@ const projects = ref([
             - 제작 참여율 : 100%(개인프로젝트) <br>
             기획, UI디자인, 개발, 배포까지 전 과정 직접 수행`,
     link: "https://kwonjung9.github.io/TESLA/index.html",
-    video: "./images/video/v-2.mp4"
+    image: "./images/video/v1.gif"
   },
   {
     title: "Airbnb Clone_반응형 숙박 예약 웹사이트",
@@ -70,7 +70,7 @@ const projects = ref([
             기획, UI디자인, 개발, 배포까지 전 과정 직접 수행
             `,
     link: "https://kwonjung9.github.io/airbnb/airbnb.html",
-    video: "/videos/tesla.mp4"
+    image: "./images/video/v2.gif"
   },
   {
     title: "Netflix Clone_React기반의 웹 구현",
@@ -84,7 +84,7 @@ const projects = ref([
             기획, UI디자인, 개발, 배포까지 전 과정 직접 수행
             `,
     link: "https://kwonjung9.github.io/neflix_clone/",
-    video: "/videos/tesla.mp4"
+    image: "./images/video/v3.gif"
   },
   {
     title: "모바일 금융 퀴즈 _React 기반의 학습 플랫폼",
@@ -97,7 +97,7 @@ const projects = ref([
             기획, UI디자인, 개발, 배포까지 전 과정 직접 수행
             `,
     link: "https://kwonjung9.github.io/quizcard/",
-    video: "/videos/tesla.mp4"
+    image: "./images/video/v4.gif"
   },
   {
     title: "eCommerce 웹사이트 구축_Vue3 쇼핑몰",
@@ -109,7 +109,7 @@ const projects = ref([
             기획, UI디자인, 개발, 배포까지 전 과정 직접 수행
             `,
     link: "https://kwonjung9.github.io/products/#/",
-    video: "/videos/tesla.mp4"
+    image: "./images/video/v5.gif"
   },
   {
     title: "블로그형 홈페이지",
@@ -122,7 +122,7 @@ const projects = ref([
             기획, UI디자인, 개발, 배포까지 전 과정 직접 수행
             `,
     link: "https://kwonjung9.github.io/blog/blog.html",
-    video: "/videos/tesla.mp4"
+    image: "./images/video/v6.gif"
   },
 ]);
 
@@ -177,7 +177,7 @@ const nextSlide =()=>{
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 150px;
   align-items: center;
   flex-shrink: 0;
 }
@@ -185,14 +185,15 @@ const nextSlide =()=>{
 .content {
   width: 800px;
   height: 650px;
-  background-color: #ffffff;
   border-radius: 20px;
+  border: 1px solid silver;
 }
 
-.content video {
+.content img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: left;
   border-radius: 20px;
 }
 

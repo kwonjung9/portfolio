@@ -6,8 +6,8 @@
     </div>
     <ul>
       <li @click="scrollTo('about')">ABOUTME</li>
-      <li @click="scrollTo('website')">WEBSITE</li>
-      <li @click="scrollTo('design')">DESIGN</li>
+      <li @click="scrollTo('website')">WEB PURBLISING</li>
+      <li @click="scrollTo('design')">PROJECT</li>
 
       <li @click="scrollTo('contact')">CONTACT</li>
     </ul>
