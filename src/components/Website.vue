@@ -183,7 +183,7 @@ const nextSlide =()=>{
 }
 
 .content {
-  width: 700px;
+  width: 800px;
   height: 650px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -206,7 +206,7 @@ const nextSlide =()=>{
   border: 1px solid silver;
   border-radius: 20px;
   width: 500px;
-  height: 630px;
+  height: 610px;
   padding: 20px;
 }
 
