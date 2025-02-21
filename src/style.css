@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'TTLaundryGothicB';
+  background-color: #F6FAFF;
+}
+li{
+  list-style: none;
+}
+a{
+  color: inherit;
+}
+@font-face {
+  font-family: 'Gyeonggi_Title_Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gyeonggi_Title_Medium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gyeonggi_Title_Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gyeonggi_TitleV';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_V.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ownglyph_ParkDaHyun';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,1 @@
+export const project = ['ABOUTME','SKLLS','WEBSITE','DESIGN','CONTACT' ];
