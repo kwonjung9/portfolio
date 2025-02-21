@@ -23,8 +23,8 @@ import { ref } from 'vue';
 // 이미지 데이터
 const images = ref([
   { src: './images/design/d-1.jpg', text: '카드뉴스' },
-  { src: './images/design/d-2.JPG', text: '카드뉴스' },
-  { src: './images/design/d-3.JPG', text: '카드뉴스' },
+  { src: './images/design/d-2.jpg', text: '카드뉴스' },
+  { src: './images/design/d-3.jpg', text: '카드뉴스' },
   { src: './images/design/d-4.jpg', text: '카드뉴스' },
   { src: './images/design/d-5.png', text: '프로젝트 인터랙티브 <br> 웹 구현' },
   { src: './images/design/d-6.png', text: '프로그래스 바 <br> 애니메이션' },
