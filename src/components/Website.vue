@@ -56,7 +56,7 @@ const projects = ref([
             - 제작 참여율 : 100%(개인프로젝트) <br>
             기획, UI디자인, 개발, 배포까지 전 과정 직접 수행`,
     link: "https://kwonjung9.github.io/TESLA/index.html",
-    video: "../.././public/images/video/v-2.mp4"
+    video: "./images/video/v-2.mp4"
   },
   {
     title: "Airbnb Clone_반응형 숙박 예약 웹사이트",
