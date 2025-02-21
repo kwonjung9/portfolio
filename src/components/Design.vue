@@ -1,6 +1,6 @@
 <template>
   <div class="design">
-    <p class="main-name">DESIGN</p>
+    <p class="main-name">PROJECT</p>
     <button class="left" @click="prevSlide"><i class="fa-solid fa-circle-arrow-left"></i></button>
     
     <div class="content-wrap">

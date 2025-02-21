@@ -1,7 +1,7 @@
 <template>
   <div class="website">
     <button id="left" @click="prevSlide" :disabled="currentIdx === 0"><i class="fa-solid fa-left-long"></i></button>
-    <p>WEBSITE</p>
+    <p>WEB PURBLISING</p>
     <div class="content-wrap">
       <div class="content-slider" :style="{transform: `translateX(${-currentIdx * 100}%)`}">
         <div class="content-container" v-for="(project, idx) in projects" :key="idx">
