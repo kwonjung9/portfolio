@@ -1,34 +1,35 @@
 <template>
   <div class="design">
     <p class="main-name">PROJECT</p>
+
     <button class="left" @click="prevSlide">
       <i class="fa-solid fa-circle-arrow-left"></i>
     </button>
 
     <div class="content-wrap">
-      <!-- 움직이는 슬라이드 컨테이너 -->
       <div class="content-container" 
         :style="{
-           transform: `translateX(${-currentIndex * 380}px)`,
+           transform: `translateX(${-currentIndex * 385}px)`,
           transition: isAnimating ? 'transform 0.5s ease-in-out' : 'none'
           }">
-        <div class="content" v-for="(item, index) in images" :key="index">
+        <div class="content" v-for="(item, index) in clonedImages" :key="index">
           <img :src="item.src" alt="카드뉴스"/>
           <p v-html="item.text"></p>
         </div>
       </div>
     </div>
 
-    <button class="right" @click="nextSlide"><i class="fa-solid fa-circle-arrow-right"></i></button>
+    <button class="right" @click="nextSlide">
+    <i class="fa-solid fa-circle-arrow-right"></i>
+    </button>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 // 이미지 데이터
 const images = ref([
-  { src: './images/design/d-10.png', text: '구글 모멘텀 디자인' },
   { src: './images/design/d-1.jpg', text: '카드뉴스' },
   { src: './images/design/d-2.jpg', text: '카드뉴스' },
   { src: './images/design/d-3.jpg', text: '카드뉴스' },
@@ -38,39 +39,54 @@ const images = ref([
   { src: './images/design/d-7.png', text: 'Chart' },
   { src: './images/design/d-8.png', text: '기념일 계산기' },
   { src: './images/design/d-9.png', text: '이미지 무한루프' },
-  { src: './images/design/d-10.png', text: '구글 모멘텀 디자인' },
-  { src: './images/design/d-1.jpg', text: '카드뉴스' }
+  { src: './images/design/d-10.png', text: '구글 모멘텀 디자인' }
 ]);
 
+//앞 뒤로 4개씩 이미지 추가
+const clonedImages = computed(()=>{
+  return [
+    ...images.value.slice(-4),
+    ...images.value,
+    ...images.value.slice(0, 4)
+  ];
+});
+
 const isAnimating = ref(true);
-const currentIndex = ref(1);
+const currentIndex = ref(4);  //첫번째서 시작
+
+onMounted(()=>{
+  currentIndex.value = 4;
+});
 
 // 이전버튼 눌렀을 때
 const prevSlide = () => {
-  if (currentIndex.value <= 0) {
-    isAnimating.value =true;
-  }
+  if(!isAnimating.value) return; //애니메이션 중 클릭 방지
+
+  isAnimating.value =true;  
   currentIndex.value--;
 
+  //첫번재 이미지에서 마지막으로 이동
   setTimeout(() => {
-    if (currentIndex.value <= 0) {
+    if (currentIndex.value === 0) {
       isAnimating.value = false;
       currentIndex.value = images.value.length; // 마지막 아이템으로 이동
+      setTimeout(()=>{ isAnimating.value = true}, 50);
     }
   }, 500);
 };
 
 //다음버튼 눌렀을 때
 const nextSlide = () => {
-  if (currentIndex.value >= images.value.length) {
-    isAnimating.value = true;
-  }
+  if (!isAnimating.value) return; // 애니메이션 중 클릭 방지
+
+  isAnimating.value = true; 
   currentIndex.value++;
 
-setTimeout(() => {
-    if (currentIndex.value >= images.value.length + 1) {
+  setTimeout(() => {
+    if (currentIndex.value === images.value.length + 4) {
       isAnimating.value = false;
-      currentIndex.value = 1; // 처음 아이템으로 이동
+      currentIndex.value = 4;
+      setTimeout(() => (isAnimating.value = true), 50);
     }
   }, 500);
 };
@@ -91,7 +107,6 @@ setTimeout(() => {
   padding: 60px 0; 
 }
 
-/* 감싸는 박스 (고정 크기) */
 .content-wrap {
   padding: 20px;
   position: absolute;
@@ -100,22 +115,18 @@ setTimeout(() => {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 500px;
-  overflow: hidden; /* 넘치는 요소 숨김 */
+  overflow: hidden; 
   background-color: #c3e5fa;
   border-radius: 5px;
   box-shadow: 5px 5px 3px #999;
 }
 
-/* 내부 컨테이너 (움직이는 요소) */
 .content-container {
   height: 100%;
   display: flex;
-  gap: 80px;
-  transition: transform 0.5s ease-in-out;
+  gap: 90px;
   align-items: center;
 }
-
-/* 개별 카드 */
 .content {
   width: 300px;
   height: 400px;
@@ -152,6 +163,7 @@ button {
   left: 80px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 5;
 }
 
 .right {
@@ -159,5 +171,6 @@ button {
   right: 40px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 5;
 }
 </style>

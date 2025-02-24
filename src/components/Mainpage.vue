@@ -8,8 +8,8 @@
       <li @click="scrollTo('about')">ABOUTME</li>
       <li @click="scrollTo('website')">WEB PURBLISING</li>
       <li @click="scrollTo('design')">PROJECT</li>
-
       <li @click="scrollTo('contact')">CONTACT</li>
+      <li v-if="menubar" class="menubar" @click="menu"><img src="../../public/images/menubar.png" alt=""></li>
     </ul>
   <div class="introduce-wrap">
     <div class="introduce-img"></div>
@@ -30,6 +30,7 @@ const emit = defineEmits(['scroll-to-section']);
 
 const percent = ref(0);
 const showBtn = ref(false);
+const menubar = ref(false);
 
 
 const scrollTo = (section) => {
@@ -95,7 +96,6 @@ onMounted(()=>{
   }
   .introduce-wrap{
     background-color: #BDE6FF;
-    width: 145px;
     height: 600px;
     width: 100%;
     display: flex;
@@ -142,4 +142,53 @@ onMounted(()=>{
   cursor: pointer;
   z-index: 10;
 }
+.menubar{
+  display: none;
+}
+//반응형
+
+// 스마트폰
+
+@media (max-width: 600px) {
+  ul{
+    margin: 10px 0;
+    justify-content: center;
+  }
+  ul > li{
+    font-weight:lighter;
+    font-size: 1rem;
+    padding-right: 1px;
+  }
+  .introduce-wrap{
+    width: 100%;
+    height: 600px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .introduce-img{
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .introduce-txt > p:nth-of-type(1){
+    font-family: 'Ownglyph_ParkDaHyun';
+    font-weight: 700;
+    font-size: 20px;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    line-height: 30px;
+    letter-spacing:15px;
+  }
+  .introduce-txt > p:nth-of-type(2){
+    font-size: 10px;
+    text-align: left;
+    line-height: 70px;
+    font-family: 'Gyeonggi_Title_Bold';
+  }
+}
+
+
 </style>
