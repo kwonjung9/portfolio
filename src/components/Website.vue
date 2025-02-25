@@ -352,7 +352,7 @@ const nextSlide =()=>{
 }
 
 #right {
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
   right: 10px;
 }
