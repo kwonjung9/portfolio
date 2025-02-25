@@ -9,16 +9,15 @@
     <div class="content-wrap">
       <div class="content-container" 
         :style="{
-           transform: `translateX(${-currentIndex * 385}px)`,
+           transform: `translateX(${-currentIndex * 390}px)`,
           transition: isAnimating ? 'transform 0.5s ease-in-out' : 'none'
           }">
         <div class="content" v-for="(item, index) in clonedImages" :key="index">
-          <img :src="item.src" alt="카드뉴스"/>
+          <img :src="item.src" alt="디자인 이미지들"/>
           <p v-html="item.text"></p>
         </div>
       </div>
     </div>
-
     <button class="right" @click="nextSlide">
     <i class="fa-solid fa-circle-arrow-right"></i>
     </button>
@@ -34,8 +33,8 @@ const images = ref([
   { src: './images/design/d-2.jpg', text: '카드뉴스' },
   { src: './images/design/d-3.jpg', text: '카드뉴스' },
   { src: './images/design/d-4.jpg', text: '카드뉴스' },
-  { src: './images/design/d-5.png', text: '프로젝트 인터랙티브 <br> 웹 구현' },
-  { src: './images/design/d-6.png', text: '프로그래스 바 <br> 애니메이션' },
+  { src: './images/design/d-5.png', text: '프로젝트 인터랙티브 웹 구현' },
+  { src: './images/design/d-6.png', text: '프로그래스 바 애니메이션' },
   { src: './images/design/d-7.png', text: 'Chart' },
   { src: './images/design/d-8.png', text: '기념일 계산기' },
   { src: './images/design/d-9.png', text: '이미지 무한루프' },
@@ -69,7 +68,7 @@ const prevSlide = () => {
   setTimeout(() => {
     if (currentIndex.value === 0) {
       isAnimating.value = false;
-      currentIndex.value = images.value.length; // 마지막 아이템으로 이동
+      currentIndex.value = images.value.length-4; // 마지막 아이템으로 이동
       setTimeout(()=>{ isAnimating.value = true}, 50);
     }
   }, 500);
@@ -78,12 +77,11 @@ const prevSlide = () => {
 //다음버튼 눌렀을 때
 const nextSlide = () => {
   if (!isAnimating.value) return; // 애니메이션 중 클릭 방지
-
   isAnimating.value = true; 
   currentIndex.value++;
 
   setTimeout(() => {
-    if (currentIndex.value === images.value.length + 4) {
+    if (currentIndex.value === images.value.length) {
       isAnimating.value = false;
       currentIndex.value = 4;
       setTimeout(() => (isAnimating.value = true), 50);
@@ -113,7 +111,7 @@ const nextSlide = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 1560px;
   height: 500px;
   overflow: hidden; 
   background-color: #c3e5fa;
@@ -126,11 +124,11 @@ const nextSlide = () => {
   display: flex;
   gap: 90px;
   align-items: center;
+  justify-content: center;
 }
 .content {
   width: 300px;
   height: 400px;
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,7 +145,7 @@ const nextSlide = () => {
 .content > p {
   font-family: 'Gyeonggi_Title_Medium';
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   padding-top: 5px;
 }
 
@@ -173,4 +171,65 @@ button {
   transform: translateY(-50%);
   z-index: 5;
 }
+
+//반응형
+
+//스마트폰
+@media (max-width: 600px) {
+  .design {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+}
+  .main-name {
+  font-family: 'Gyeonggi_Title_Bold';
+  text-align: center;
+  font-size: 50px;
+  color: #222;
+  padding: 50px 0; 
+}
+
+.content-wrap {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 400px;
+}
+.content {
+  width: 300px;
+  height: 400px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+button {
+  border: none;
+  font-size: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 15px;
+}
+}
+
+
+//태블릿
+@media (max-width: 1440px){
+
+}
+
+
 </style>

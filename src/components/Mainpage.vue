@@ -68,11 +68,13 @@ onMounted(()=>{
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 30;
+
   }
   .bar{
     border-radius: 50px;
     height: 10px;
-    background-color: rgba($color: #ddd, $alpha: 0.7);
+    background-color: rgba($color: #ddd, $alpha: 0.3);
   }
   ul{
     font-family: 'Gyeonggi_Title_Medium';
@@ -96,7 +98,7 @@ onMounted(()=>{
   }
   .introduce-wrap{
     background-color: #BDE6FF;
-    height: 600px;
+    height: 650px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -150,6 +152,9 @@ onMounted(()=>{
 // 스마트폰
 
 @media (max-width: 600px) {
+  .line{
+    visibility: hidden;
+  }
   ul{
     margin: 10px 0;
     justify-content: center;
@@ -161,7 +166,7 @@ onMounted(()=>{
   }
   .introduce-wrap{
     width: 100%;
-    height: 600px;
+    height: 550px;
     gap: 20px;
     display: flex;
     flex-direction: column;
@@ -175,20 +180,27 @@ onMounted(()=>{
   }
   .introduce-txt > p:nth-of-type(1){
     font-family: 'Ownglyph_ParkDaHyun';
-    font-weight: 700;
-    font-size: 20px;
+    font-size: 40px;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.8);
-    margin-bottom: 30px;
-    line-height: 30px;
-    letter-spacing:15px;
+    margin-bottom: 20px;
+    line-height: 50px;
+    letter-spacing:10px;
+    text-align: center;
   }
   .introduce-txt > p:nth-of-type(2){
-    font-size: 10px;
-    text-align: left;
-    line-height: 70px;
-    font-family: 'Gyeonggi_Title_Bold';
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing:5px;
   }
 }
 
+
+//태블릿
+
+//태블릿
+@media (max-width: 1440px){
+  
+}
 
 </style>

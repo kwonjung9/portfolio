@@ -60,7 +60,7 @@ const projects = ref([
   },
   {
     title: "Airbnb Clone_반응형 숙박 예약 웹사이트",
-    description: "반응형 웹 디자인, 웹 표준 및 접근성 준수를 중심으로 개발하여 다양한 디바이스에서 최적화 된 사용자 경험을 제공하도록 개발하였습니다",
+    description: "반응형 웹 디자인, 웹 표준 및 접근성 준수를 중심으로 개발하여 다양한 디바이스에서 최적화 된 사용자 경험을 제공하도록 개발하였습니다.",
     stack: `-UI 디자인 방식 : Figma를 활용해 화면 분석 후 코딩 진행 <br>
             -제작에 사용된 스킬 : HTML5, CSS3 <br>
             -레이아웃 제작 방식 : Flexbox를 활용한 구성 <br>
@@ -282,5 +282,79 @@ const nextSlide =()=>{
 
 #right {
   right: 40px;
+}
+
+
+
+//반응형
+
+//스마트폰
+@media (max-width: 600px) {
+  .website {
+  width: 100%;
+  height: 150vh;
+  background-color: #BDE6FF;
+  position: relative;
+}
+.website > p {
+  font-family: 'Gyeonggi_Title_Bold';
+  text-align: center;
+  font-size: 50px;
+  color: #222;
+  padding: 50px 0;
+}
+.content-wrap {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.content-container {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.content {
+  width: 500px;
+  height: 400px;
+  border-radius: 20px;
+  border: 1px solid silver;
+}
+
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 20px;
+}
+.p-txt{
+  width: 460px;
+  height: 600px;
+}
+
+.dot{
+  visibility: hidden;
+}
+
+#left {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  z-index: 5;
+}
+
+#right {
+  top: 55%;
+  transform: translateY(-50%);
+  right: 10px;
+}
 }
 </style>

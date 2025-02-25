@@ -59,7 +59,6 @@
   text-align: center;
 }
 .about  p{
-
   font-size: 30px;
   line-height: 60px;
 }
@@ -105,5 +104,62 @@
 }
 span{
   font-family: 'Gyeonggi_Title_Medium';
+}
+
+//반응형
+
+// 스마트폰
+
+@media (max-width: 600px) {
+  .main-txt{
+  gap: 20px;
+  font-size: 50px;
+  padding: 50px 0;
+  font-family: 'Gyeonggi_Title_Bold';
+}
+.main-txt > img{
+  width: 50px;
+  height: 50px;
+}
+.about  p{
+  font-size: 20px;
+  line-height: 50px;
+}
+.sklls{
+  padding: 35px 0;
+}
+.sklls > p{
+  padding: 20px 0;
+  font-size: 40px;
+  font-family: 'Gyeonggi_Title_Medium';
+}
+.sklls  img{
+  width: 70px;
+  height: 70px;
+}
+.img-wrap{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+  line-height: 30px;
+}
+.img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 20px;
+}
+}
+
+// 태블릿
+
+//태블릿
+@media (max-width: 1440px){
+  
 }
 </style>
