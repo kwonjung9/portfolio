@@ -64,8 +64,4 @@
   }
 }  
 
-//태블릿
-@media (max-width: 1440px){
-  
-}
 </style>

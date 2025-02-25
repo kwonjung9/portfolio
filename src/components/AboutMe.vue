@@ -155,11 +155,4 @@ span{
   font-size: 20px;
 }
 }
-
-// 태블릿
-
-//태블릿
-@media (max-width: 1440px){
-  
-}
 </style>

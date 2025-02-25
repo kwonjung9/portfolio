@@ -197,7 +197,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 310px;
   height: 400px;
 }
 .content {
@@ -227,10 +227,5 @@ button {
 }
 }
 
-
-//태블릿
-@media (max-width: 1440px){
-
-}
 
 </style>
