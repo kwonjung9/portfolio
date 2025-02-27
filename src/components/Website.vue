@@ -292,7 +292,7 @@ const nextSlide =()=>{
 @media (max-width: 480px) {
   .website {
   width: 100%;
-  height: 170vh;
+  height: 180vh;
   background-color: #BDE6FF;
   position: relative;
 }
