@@ -117,7 +117,7 @@ onMounted(()=>{
   .introduce-txt > p:nth-of-type(1){
     font-family: 'Ownglyph_ParkDaHyun';
     font-weight: 700;
-    font-size: 60px;
+    font-size: 55px;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.8);
     margin-bottom: 30px;
     line-height: 90px;
