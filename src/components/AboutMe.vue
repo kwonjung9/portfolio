@@ -172,7 +172,7 @@ span{
     align-items: center;
   font-family: 'Gyeonggi_Title_Bold';
   width: 100%;
-  height: 90%;
+  height: 100vh;
   text-align: center;
   }
   .main-txt{
