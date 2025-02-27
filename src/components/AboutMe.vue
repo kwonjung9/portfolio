@@ -110,7 +110,13 @@ span{
 
 // 스마트폰
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  .about{
+  font-family: 'Gyeonggi_Title_Bold';
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  }
   .main-txt{
   gap: 20px;
   font-size: 50px;
@@ -153,6 +159,64 @@ span{
   justify-content: center;
   gap: 15px;
   font-size: 20px;
+}
+}
+
+//태블릿
+
+@media (min-width: 480px) and (max-width: 1440px) {
+  .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  font-family: 'Gyeonggi_Title_Bold';
+  width: 100%;
+  height: 90%;
+  text-align: center;
+  }
+  .main-txt{
+  gap: 35px;
+  font-size: 55px;
+  padding: 50px 0;
+  font-family: 'Gyeonggi_Title_Bold';
+}
+.main-txt > img{
+  width: 55px;
+  height: 55px;
+}
+.about  p{
+  font-size: 25px;
+  line-height: 55px;
+}
+.sklls{
+  padding: 40px 0;
+}
+.sklls > p{
+  padding: 15px 0;
+  font-size: 40px;
+  font-family: 'Gyeonggi_Title_Medium';
+}
+.sklls  img{
+  width: 70px;
+  height: 70px;
+}
+.img-wrap{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+  line-height: 30px;
+}
+.img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 22px;
 }
 }
 </style>

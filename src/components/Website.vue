@@ -129,7 +129,6 @@ const projects = ref([
 const currentIdx = ref(0);
 
 const prevSlide = () => {
-  console.log("이전버튼");
   if (currentIdx.value > 0) {
     currentIdx.value--;
   }
@@ -230,6 +229,7 @@ const nextSlide =()=>{
 
 #main {
   font-family: 'Gyeonggi_Title_Medium';
+  font-size: 20px;
 }
 
 #stack {
@@ -271,17 +271,17 @@ const nextSlide =()=>{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 50px;
+  font-size: 60px;
   cursor: pointer;
 }
 
 #left {
-  left: 40px;
+  left: 80px;
   z-index: 5;
 }
 
 #right {
-  right: 40px;
+  right: 80px;
 }
 
 
@@ -289,7 +289,7 @@ const nextSlide =()=>{
 //반응형
 
 //스마트폰
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .website {
   width: 100%;
   height: 150vh;
@@ -299,7 +299,7 @@ const nextSlide =()=>{
 .website > p {
   font-family: 'Gyeonggi_Title_Bold';
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #222;
   padding: 50px 0;
 }
@@ -318,12 +318,12 @@ const nextSlide =()=>{
 }
 .content-container {
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 }
 
 .content {
-  width: 500px;
-  height: 400px;
+  width: 80%;
+  height: 35%;
   border-radius: 20px;
   border: 1px solid silver;
 }
@@ -336,8 +336,23 @@ const nextSlide =()=>{
   border-radius: 20px;
 }
 .p-txt{
-  width: 460px;
-  height: 600px;
+  width: 70%;
+  height: 100%;
+}
+
+#main{
+  font-size: 18px;
+}
+
+.p-txt p{
+  font-size: 16px;
+}
+#stack {
+  font-size: 16px;
+}
+
+#link {
+  font-size: 14px;
 }
 
 .dot{
@@ -345,15 +360,103 @@ const nextSlide =()=>{
 }
 
 #left {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25%;
+  // transform: translateY(-50%);
+  left: 10px;
+  z-index: 5;
+  font-size: 35px;
+}
+
+#right {
+  top: 25%;
+  // transform: translateY(-50%);
+  right: 10px;
+  font-size: 35px;
+}
+}
+
+//태블릿
+
+@media (min-width: 480px) and (max-width: 1440px) {
+  .website {
+  width: 100%;
+  height: 170vh;
+  background-color: #BDE6FF;
+  position: relative;
+}
+.website > p {
+  font-family: 'Gyeonggi_Title_Bold';
+  text-align: center;
+  font-size: 55px;
+  color: #222;
+  padding: 55px 0;
+}
+.content-wrap {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.content-container {
+  flex-direction: column;
+  gap: 50px;
+}
+
+.content {
+  width: 75%;
+  height: 35%;
+  border-radius: 20px;
+  border: 1px solid silver;
+}
+
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 20px;
+}
+.p-txt{
+  width: 70%;
+  height: 100%;
+}
+
+#main{
+  font-size: 18px;
+}
+
+.p-txt p{
+  font-size: 16px;
+}
+#stack {
+  font-size: 16px;
+}
+
+#link {
+  font-size: 16px;
+}
+
+.dot{
+  visibility: hidden;
+}
+
+#left {
+  top: 45%;
+  // transform: translateY(-50%);
   left: 10px;
   z-index: 5;
 }
 
 #right {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 45%;
+  // transform: translateY(-50%);
   right: 10px;
 }
 }

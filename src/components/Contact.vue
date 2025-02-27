@@ -43,7 +43,7 @@
   // 반응형
 
   // 스마트폰
-  @media (max-width: 600px) {
+  @media (max-width: 480px) {
     .contact{
       height: 15vh;
       gap: 15px;
@@ -52,14 +52,14 @@
     font-size: 20px;
   }
   .contact a img{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
   .images{
     gap: 30px;
   }
   .reserved{
-    font-size: 10px;
+    font-size: 8px;
     color: #444;
   }
 }  

@@ -58,7 +58,7 @@ onMounted(()=>{
 <style lang="scss" scoped>
 .app{
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
   }
   .line{
     width: 95%;
@@ -106,6 +106,7 @@ onMounted(()=>{
     gap: 300px;
     margin-top: 40px;
     padding: 15px 0;
+    position: relative;
   }
   .introduce-img{
     background-color: blueviolet;
@@ -132,36 +133,41 @@ onMounted(()=>{
   font-family: 'Ownglyph_ParkDaHyun';
   font-size: 25px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10%;
+  right: 25px;
   width: 60px;
   height: 60px;
   border: 1px solid #888;
   outline: none;
-  background-color: #95d8ff;
+  background-color: #b1d9f0;
   padding: 5px;
   border-radius: 50px;
   cursor: pointer;
   z-index: 10;
-}
-.menubar{
-  display: none;
+  box-shadow: inset 0 0 5px #999999;
 }
 //반응형
 
 // 스마트폰
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  .top{
+  font-size: 18px;
+  bottom: 10%;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+}
   .line{
     visibility: hidden;
   }
   ul{
-    margin: 10px 0;
+    margin: 5px 0;
     justify-content: center;
   }
   ul > li{
     font-weight:lighter;
-    font-size: 1rem;
+    font-size: 14px;
     padding-right: 1px;
   }
   .introduce-wrap{
@@ -191,6 +197,63 @@ onMounted(()=>{
     text-align: center;
     font-size: 20px;
     line-height: 30px;
+    letter-spacing:5px;
+  }
+}
+
+//태블릿
+
+@media (min-width: 480px) and (max-width: 1440px) {
+  .top{
+  font-size: 20px;
+  bottom: 5%;
+  right: 5%;
+  width: 55px;
+  height: 55px;
+  }
+  .line{
+    visibility: hidden;
+  }
+  .container{
+    width: 100vw;
+  }
+  ul{
+    margin: 5px 0;
+    width: 100%;
+    justify-content: center;
+  }
+  ul > li{
+    font-weight:lighter;
+    font-size: 18px;
+    padding-right: 3px;
+  }
+  .introduce-wrap{
+    width: 100%;
+    height: 600px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .introduce-img{
+    background-color: blueviolet;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  .introduce-txt > p:nth-of-type(1){
+    font-family: 'Ownglyph_ParkDaHyun';
+    font-size: 45px;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 50px;
+    letter-spacing:10px;
+    text-align: center;
+  }
+  .introduce-txt > p:nth-of-type(2){
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
     letter-spacing:5px;
   }
 }

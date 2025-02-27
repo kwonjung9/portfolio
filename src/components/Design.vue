@@ -177,7 +177,7 @@ button {
 //반응형
 
 //스마트폰
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .design {
   width: 100%;
   height: 85vh;
@@ -186,7 +186,7 @@ button {
   .main-name {
   font-family: 'Gyeonggi_Title_Bold';
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #222;
   padding: 50px 0; 
 }
@@ -202,8 +202,7 @@ button {
 }
 .content {
   width: 300px;
-  height: 400px;
-  flex-shrink: 0;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,5 +226,56 @@ button {
 }
 }
 
+
+//태블릿
+
+@media (min-width: 480px) and (max-width: 1440px) {
+  .design {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+  .main-name {
+  font-family: 'Gyeonggi_Title_Bold';
+  text-align: center;
+  font-size: 55px;
+  color: #222;
+  padding: 50px 0; 
+}
+
+.content-wrap {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 310px;
+  height: 400px;
+}
+.content {
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+button {
+  border: none;
+  font-size: 50px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.left {
+  left: 10%;
+}
+
+.right {
+  right: 10%;
+}
+}
 
 </style>
