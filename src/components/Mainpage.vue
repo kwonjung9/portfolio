@@ -12,6 +12,7 @@
       <li v-if="menubar" class="menubar" @click="menu"><img src="../../public/images/menubar.png" alt=""></li>
     </ul>
   <div class="introduce-wrap">
+    <img src="/public/images/Rainbow.png" alt="무지개이미지">
     <div class="introduce-img"></div>
     <div class="introduce-txt">
       <p>JungEun Kwon's <br>PORTFOLIO :）</p>
@@ -108,6 +109,26 @@ onMounted(()=>{
     padding: 15px 0;
     position: relative;
   }
+  .introduce-wrap > img{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    bottom: 23%;
+    right: 20%;
+    transform: rotate(15deg);
+    animation: img-ani 1s infinite linear;
+  }
+  @keyframes img-ani {
+    0%{
+      transform: rotate(0);
+    }
+    50%{
+      transform: rotate(15deg);
+    }
+    100%{
+      transform: rotate(0);
+    }
+  }
   .introduce-img{
     background-color: blueviolet;
     width: 450px;
@@ -131,12 +152,12 @@ onMounted(()=>{
   }
   .top{
   font-family: 'Ownglyph_ParkDaHyun';
-  font-size: 25px;
+  font-size: 30px;
   position: fixed;
-  bottom: 10%;
+  bottom: 25px;
   right: 25px;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border: 1px solid #888;
   outline: none;
   background-color: #b1d9f0;
@@ -153,7 +174,7 @@ onMounted(()=>{
 @media (max-width: 480px) {
   .top{
   font-size: 18px;
-  bottom: 10%;
+  bottom: 5%;
   right: 5%;
   width: 50px;
   height: 50px;
@@ -177,7 +198,13 @@ onMounted(()=>{
     display: flex;
     flex-direction: column;
   }
-
+  .introduce-wrap > img{
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    bottom: 13%;
+    right: 8%;
+  }
   .introduce-img{
     background-color: blueviolet;
     width: 200px;
@@ -234,7 +261,9 @@ onMounted(()=>{
     display: flex;
     flex-direction: column;
   }
-
+  .introduce-wrap > img{
+    display: none;
+  }
   .introduce-img{
     background-color: blueviolet;
     width: 250px;
