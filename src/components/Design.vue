@@ -97,7 +97,6 @@ const nextSlide = () => {
   width: 100%;
   height: 100vh;
   position: relative;
-  bottom: 0;
 }
 
 .main-name {
@@ -111,7 +110,7 @@ const nextSlide = () => {
 .content-wrap {
   padding: 20px;
   position: absolute;
-  // top: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1500px;
@@ -196,7 +195,6 @@ button {
   padding: 20px;
   position: absolute;
   top: 50%;
-  // bottom: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 310px;

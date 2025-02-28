@@ -160,7 +160,7 @@ onMounted(()=>{
   height: 80px;
   border: 1px solid #888;
   outline: none;
-  background-color: #b1d9f0;
+  background-color: #f3fbff;
   padding: 5px;
   border-radius: 50px;
   cursor: pointer;
@@ -199,11 +199,7 @@ onMounted(()=>{
     flex-direction: column;
   }
   .introduce-wrap > img{
-    width: 100px;
-    height: 80px;
-    position: absolute;
-    bottom: 13%;
-    right: 8%;
+    display: none;
   }
   .introduce-img{
     background-color: blueviolet;

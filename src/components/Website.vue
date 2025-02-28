@@ -145,7 +145,7 @@ const nextSlide =()=>{
 <style lang="scss" scoped>
 .website {
   width: 100%;
-  height: 150vh;
+  height: 100vh;
   background-color: #BDE6FF;
   position: relative;
 }
