@@ -425,7 +425,7 @@ const nextSlide =()=>{
 }
 .p-txt{
   width: 70%;
-  height: 100%;
+  height: 65%;
 }
 
 #main{

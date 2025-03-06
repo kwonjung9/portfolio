@@ -131,7 +131,6 @@ onMounted(()=>{
     }
   }
   .introduce-img > img{
-    background-color: blueviolet;
     width: 450px;
     height: 450px;
     border-radius: 50%;
@@ -203,8 +202,7 @@ onMounted(()=>{
   .introduce-wrap > img{
     display: none;
   }
-  .introduce-img{
-    background-color: blueviolet;
+  .introduce-img >img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -262,8 +260,7 @@ onMounted(()=>{
   .introduce-wrap > img{
     display: none;
   }
-  .introduce-img{
-    background-color: blueviolet;
+  .introduce-img >img{
     width: 250px;
     height: 250px;
     border-radius: 50%;
