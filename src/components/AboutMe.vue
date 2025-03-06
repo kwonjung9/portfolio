@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="sklls">
-      <p>sklls</p>
+      <p>skils</p>
       <div class="img-wrap">
         <div class="img">
         <img src="../../public/images/html.png" alt="html">
@@ -35,12 +35,20 @@
         <span>Vue</span>
         </div>
         <div class="img">
+        <img src="../../public/images/sass.png" alt="sass">
+        <span>sass</span>
+        </div>
+        <div class="img">
         <img src="../../public/images/Photoshop .png" alt="photoshop">
         <span>photoshop</span>
         </div>
         <div class="img">
         <img src="../../public/images/Illustrator .png" alt="Illustrator">
         <span>Illustrator</span>
+        </div>
+        <div class="img">
+        <img src="../../public/images/Figma.png" alt="Figma">
+        <span>Figma</span>
         </div>
       </div>
     </div>
@@ -89,10 +97,11 @@
 }
 .img-wrap{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 60px;
-  padding: 30px 0;
+  padding: 30px
 }
 .img{
   display: flex;

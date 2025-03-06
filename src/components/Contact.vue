@@ -64,4 +64,29 @@
   }
 }  
 
+//태블릿
+
+@media (min-width: 480px) and (max-width: 1440px) {
+  @media (max-width: 480px) {
+    .contact{
+      height: 15vh;
+      gap: 15px;
+  }
+  .contact > .main-txt{
+    font-size: 20px;
+  }
+  .contact a img{
+    width: 25px;
+    height: 25px;
+  }
+  .images{
+    gap: 30px;
+  }
+  .reserved{
+    font-size: 8px;
+    color: #444;
+  }
+}  
+}
+
 </style>

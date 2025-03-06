@@ -9,11 +9,12 @@
       <li @click="scrollTo('website')">WEB PURBLISING</li>
       <li @click="scrollTo('design')">PROJECT</li>
       <li @click="scrollTo('contact')">CONTACT</li>
-      <li v-if="menubar" class="menubar" @click="menu"><img src="../../public/images/menubar.png" alt=""></li>
     </ul>
   <div class="introduce-wrap">
     <img src="/public/images/Rainbow.png" alt="무지개이미지">
-    <div class="introduce-img"></div>
+    <div class="introduce-img">
+      <img src="../../public/images/profile.png" alt="프로필 이미지">
+    </div>
     <div class="introduce-txt">
       <p>JungEun Kwon's <br>PORTFOLIO :）</p>
       <p>안녕하세요! <br>프론트앤드 개발자<br> 권정은 입니다 .</p>
@@ -129,11 +130,12 @@ onMounted(()=>{
       transform: rotate(0);
     }
   }
-  .introduce-img{
+  .introduce-img > img{
     background-color: blueviolet;
     width: 450px;
     height: 450px;
     border-radius: 50%;
+    object-fit: contain;
   }
   .introduce-txt > p:nth-of-type(1){
     font-family: 'Ownglyph_ParkDaHyun';
